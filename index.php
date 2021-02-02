@@ -93,11 +93,11 @@
         <!-- Disco ad esempio -->
         <div class="cd">
         <?php foreach($dischi as $value){?>
-            <img <?php echo $value["poster"]; ?> src="cd.poster" alt="" />
-            <h3><?php echo $value["poster"]; ?></h3>
+            <img src="<?php echo $value["poster"]; ?>" alt="" />
+            <h3><?php echo $value["title"]; ?></h3>
             <span class="author"><?php echo $value["title"]; ?></span>
             <span class="author"><?php echo $value["author"]; ?></span>
-            <span class="author"><?php echo $value["year"];?></span>
+            <span class="year"><?php echo $value["year"];?></span>
             <span class="year"><?php echo $value["genre"];?></span>
         <?php } ?> 
         </div>
