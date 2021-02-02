@@ -91,16 +91,18 @@
 
       <div class="cds-container container">
         <!-- Disco ad esempio -->
-        <div class="cd">
+        
         <?php foreach($dischi as $value){?>
-            <img src="<?php echo $value["poster"]; ?>" alt="" />
-            <h3><?php echo $value["title"]; ?></h3>
-            <span class="author"><?php echo $value["title"]; ?></span>
-            <span class="author"><?php echo $value["author"]; ?></span>
-            <span class="year"><?php echo $value["year"];?></span>
-            <span class="year"><?php echo $value["genre"];?></span>
+            <div class="cd">
+                <img src="<?php echo $value["poster"]; ?>" alt="" />
+                <h3><?php echo $value["title"]; ?></h3>
+                
+                <span class="author"><?php echo $value["author"]; ?></span>
+                <span class="year"><?php echo $value["year"];?></span>
+               
+            </div>
         <?php } ?> 
-        </div>
+        
       </div>
     </div>
     
