@@ -90,11 +90,15 @@
 
       <div class="cds-container container">
         <!-- Disco ad esempio -->
-        <div class="cd" v-for="cd in listaCd">
-          <img :src="cd.poster" alt="" />
-          <h3>{{ cd.title }}</h3>
-          <span class="author">{{ cd.author }}</span>
-          <span class="year">{{ cd.year }}</span>
+        <div class="cd">
+        <?php foreach($dischi as $value){?>
+            <img <?php echo $value["poster"]; ?> src="cd.poster" alt="" />
+            <h3><?php echo $value["poster"]; ?></h3>
+            <span class="author"><?php echo $value["title"]; ?></span>
+            <span class="author"><?php echo $value["author"]; ?></span>
+            <span class="author"><?php echo $value["year"];?></span>
+            <span class="year"><?php echo $value["genre"];?></span>
+        <?php } ?> 
         </div>
       </div>
     </div>
