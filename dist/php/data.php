@@ -70,58 +70,9 @@
         "genre" => "Pop",
         "year" => "1987"
         ]
-        ]
+    ];
+
+    header('Content-Type: application/json ');
+    echo json_encode($dischi);
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./dist/css/style.css">
-    <title>Ajax Dischi</title>
-    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-</head>
-<body>
-      <header>
-        <div class="container">
-          <img src="logo.png" alt="logo" />
-        </div>
-      </header>
-      
-      <!-- parte php -->
-      <div class="cds-container container">
-        <?php foreach($dischi as $value){?>
-            <div class="cd">
-                <img src="<?php echo $value["poster"]; ?>" alt="" />
-                <h3><?php echo $value["title"]; ?></h3>
-                <span class="author"><?php echo $value["author"]; ?></span>
-                <span class="year"><?php echo $value["year"];?></span>
-            </div>
-        <?php } ?> 
-
-        <!-- parte vueJs -->
-      <div id="app">
-        <div class="cds-container container">
-          <div  class="cd" v-for="cd in listaCd">
-            <img :src="cd.poster" alt="" />
-            <h3>{{ cd.title }}</h3>
-            <span class="author">{{ cd.author }}</span>
-            <span class="year">{{ cd.year }}</span>
-        </div>
-      </div>
-
-      
-       
-      </div>
-        
-        
-      </div>
-    </div>
-    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
-    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
-    <script src="./dist/js/main.js" charset="utf-8"></script>
-    
-</body>
-</html>
